@@ -29,29 +29,58 @@ body {
   list-style-type: none;
   margin: auto;
   width: 100%;
+
+  &__item {
+    margin-bottom: 8px;
+  }
 }
 
-.list__item {
+.list-item {
   display: flex;
   align-items: center;
   height: 40px;
   border-radius: 8px;
   background-color: wheat;
-  margin-bottom: 8px;
   padding: 8px;
-}
 
-.list__item_done {
-  text-decoration: line-through;
-  opacity: 0.7;
-}
+  &:last-child {
+    margin-bottom: 0px;
+  }
 
-.list__item:last-child {
-  margin-bottom: 0;
-}
+  &_done {
+    text-decoration: line-through;
+    opacity: 0.7;
 
-.list__item-checkbox {
-  margin-right: 8px;
+    .list-item__text {
+      text-decoration: line-through;
+    }
+  }
+
+  &__checkbox {
+    margin-right: 8px;
+  }
+
+  &__delete-btn {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    margin-left: auto;
+    text-decoration: none;
+    padding: 0;
+    transform: rotate(45deg);
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    opacity: 0.7;
+
+    &::before {
+      content: '+';
+    }
+  }
 }
 
 .btn {
