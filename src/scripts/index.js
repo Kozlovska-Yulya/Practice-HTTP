@@ -31,7 +31,7 @@ const renderTasks = () => {
         listItemElem.classList.add('list-item_done');
       }
 
-      const textElem = document.querySelector('span');
+      const textElem = document.createElement('span');
       textElem.classList.add('list-item__text');
       textElem.textContent = text;
 
