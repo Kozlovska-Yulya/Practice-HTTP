@@ -104,7 +104,7 @@ listElem.addEventListener('click', checkboxClick);
 document.addEventListener('DOMContentLoaded', () => {
   getTasksList().then((tasksList) => {
     setItem('tasksList', tasksList);
-    // renderTasks();
+    renderTasks();
   });
 });
 
