@@ -1,6 +1,6 @@
 import { createNewTasks } from './createNewTasks.js';
 import { checkboxClick } from './checkbox.js';
-import { clickOnDeleteBtn } from './deleteTask.js';
+import { clickOnDeleteBtn, handleListClicks } from './deleteTask.js';
 
 export const initTodoListHandlers = () => {
   const createBtnElem = document.querySelector('.create-task-btn');
@@ -9,6 +9,9 @@ export const initTodoListHandlers = () => {
   const listElem = document.querySelector('.list');
   listElem.addEventListener('click', checkboxClick);
 
-  const deleteTaskElem = document.querySelector('.list-item');
+  const deleteTaskElem = document.querySelector('.list');
   deleteTaskElem.addEventListener('click', clickOnDeleteBtn);
+
+  const todoListElem = document.querySelector('.list');
+  todoListElem.addEventListener('click', handleListClicks);
 };

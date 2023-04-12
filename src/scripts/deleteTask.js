@@ -1,5 +1,5 @@
 import { checkboxClick } from './checkbox.js';
-import { createNewTasks } from './createNewTasks.js';
+
 import { renderTasks } from './render.js';
 import { setItem } from './storage.js';
 import { deleteTask, getTasksList } from './tasksGateway.js';
@@ -50,7 +50,7 @@ export const clickOnDeleteBtn = (e) => {
 //     finishDate: done ? new Date().toISOString() : null,
 //   };
 
-const handleListClicks = (e) => {
+export const handleListClicks = (e) => {
   const isCheckbox = e.target.classList.contains('list-item__checkbox');
 
   if (isCheckbox) {
