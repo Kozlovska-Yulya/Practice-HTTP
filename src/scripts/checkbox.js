@@ -3,12 +3,7 @@ import { setItem, getItem } from './storage.js';
 import { getTasksList, updateTask } from './tasksGateway.js';
 
 export function checkboxClick(event) {
-  const isCheckbox = event.target.classList.contains('list-item__checkbox');
-  if (!isCheckbox) {
-    return;
-  }
-
-  const taskId = event.target.dataset.id;
+  const taskId = event.target.closest('.list-item').dataset.id;
   const tasksList = getItem('tasksList');
   const { text, createDate } = tasksList.find((task) => task.id === taskId);
   const done = event.target.checked;
